@@ -1,8 +1,10 @@
-import Engine
-import Room
-import Player
+#import Engine
+#import Room
+from Player import Player
+from Monster import Monster
+from Fight import Fight
 
-print "Plase insert your name:"
+print "Please insert your name:"
 player_name = raw_input()
 
 print """
@@ -20,10 +22,25 @@ while(select_number):
     else:
         print "Please select one of the warrior type"
 
-location = Room('arena')
-player = Player(player_name, player_type)
-game = Engine(player, location)
-game.play()
+
+player = Player(player_name,player_type)
+monster = Monster()
+
+player.to_string()
+monster.to_string()
+
+fight = Fight(player, monster)
+fight.autofight()
+
+
+
+
+
+
+# location = Room('arena')
+# player = Player(player_name, player_type)
+# game = Engine(player, location)
+# game.play()
 
 
 

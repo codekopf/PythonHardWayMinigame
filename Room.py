@@ -1,5 +1,6 @@
 from Arena import Arena
 
+
 class Room(object):
 
     rooms = {
